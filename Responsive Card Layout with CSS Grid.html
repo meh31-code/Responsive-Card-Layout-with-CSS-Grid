@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Card Layout with CSS Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      background-color: #f9f9f9;
+      padding: 10px;
+      height: 250px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Tablet: 2 columns */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile: 1 column */
+    @media (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Responsive CSS Grid Card Layout</h1>
+
+  <div class="grid-container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x120" alt="Card Image">
+      <h3>Card Title 1</h3>
+      <p>This is a description for card one.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x120" alt="Card Image">
+      <h3>Card Title 2</h3>
+      <p>This is a description for card two.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x120" alt="Card Image">
+      <h3>Card Title 3</h3>
+      <p>This is a description for card three.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x120" alt="Card Image">
+      <h3>Card Title 4</h3>
+      <p>This is a description for card four.</p>
+    </div>
+  </div>
+
+</body>
+</html>
